@@ -9,15 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nameText: UITextField!
+    let name:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let display:DisplayController = segue.destination as! DisplayController
+        display.name = nameText.text!
+    }
+    // 画面が戻ってきた時に利用する。
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        
+        
     }
 
 
