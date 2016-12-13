@@ -16,7 +16,7 @@ class DisplayController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Label.text = name
+        Label.text = "こんにちは、\(name)さん"
         // Do any additional setup after loading the view.
     }
 
